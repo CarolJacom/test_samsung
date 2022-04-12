@@ -22,7 +22,7 @@ var createScene = function () {
   /* Camera */
   var camera = createFreeCamera(scene);
   /* Collisions */
-  scene.collisionsEnabled = true;
+  scene.collisionsEnabled = false;
 
   // import scene
   BABYLON.SceneLoader.ShowLoadingScreen = false;
@@ -51,7 +51,7 @@ function createFreeCamera(scene) {
   camera.keysRight.push('D'.charCodeAt(0));
 
   camera.position = new BABYLON.Vector3(-4.3, 1.6, 340);
-  camera.rotation = new BABYLON.Vector3( -0.2593813947923082, -3.141737888167168, 0);
+  camera.rotation = new BABYLON.Vector3( 0, 0, 0);
   
   return camera;
 }

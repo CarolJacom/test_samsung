@@ -37,7 +37,7 @@ var createScene = function () {
 function createFreeCamera(scene) {
   var camera = new BABYLON.FreeCamera("freeCamera", new BABYLON.Vector3(1, 1, 1), scene);
   camera.attachControl(canvas);
-  camera.checkCollisions = true;
+  camera.checkCollisions = false;
   camera.applyGravity = false;
   camera.ellipsoid = new BABYLON.Vector3(1.2, 0.82, 1.2);
   camera.speed = 0.10;
@@ -50,7 +50,7 @@ function createFreeCamera(scene) {
   camera.keysRight.push('d'.charCodeAt(0));
   camera.keysRight.push('D'.charCodeAt(0));
 
-  camera.position = new BABYLON.Vector3(-4.3, 1.6, 34);
+  camera.position = new BABYLON.Vector3(-4.3, 1.6, 340);
   camera.rotation = new BABYLON.Vector3( -0.2593813947923082, -3.141737888167168, 0);
   
   return camera;

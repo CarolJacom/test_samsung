@@ -15,10 +15,6 @@ function startGame() {
     scene.render();
   });
 }
-    function AnimationBlender(scene){
-  var box = scene.getMeshByName("anm_box")
-  scene.beginAnimation(box, 0, 250, true);
-}
 
 var createScene = function () {
   var scene = new BABYLON.Scene(engine); // defines the engine to render the scene
@@ -38,6 +34,10 @@ var createScene = function () {
     AnimationBlender.play(true)
     return scene;
   }
+      function AnimationBlender(scene){
+  var box = scene.getMeshByName("anm_box")
+  scene.beginAnimation(box, 0, 250, true);
+}
 
 function createFreeCamera(scene) {
   var camera = new BABYLON.FreeCamera("freeCamera", new BABYLON.Vector3(1, 1, 1), scene);

@@ -56,7 +56,7 @@ function createFreeCamera(scene) {
   return camera;
 }
 function Animationblender(scene){
-  var box = scene.getMeshByName("anm_box)
+  var box = scene.getMeshByName("anm_box")
   scene.beginAnimation(box, 0, 250, true);
 }
   

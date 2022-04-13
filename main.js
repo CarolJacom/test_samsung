@@ -27,6 +27,27 @@ var createScene = function () {
       function AnimationBlender(scene){
     var box = scene.getMeshByName("anm_box")
     scene.beginAnimation(box, 0, 250, true);
+    var box_b = scene.getMeshByName("anm_box_b")
+    scene.beginAnimation(box_b, 0, 250, true);
+    var box_f = scene.getMeshByName("anm_box_f")
+    scene.beginAnimation(box_f, 0, 250, true);
+    var box_l = scene.getMeshByName("anm_box_l")
+    scene.beginAnimation(box_l, 0, 250, true);
+    var box_r = scene.getMeshByName("anm_box_r")
+    scene.beginAnimation(box_r, 0, 250, true);
+    var box_u = scene.getMeshByName("anm_box_u")
+    scene.beginAnimation(box_u, 0, 250, true);
+    var box_logo_a = scene.getMeshByName("anm_logo_a")
+    scene.beginAnimation(box_logo_a, 0, 250, true);
+    var box_logo_c = scene.getMeshByName("anm_logo_c")
+    scene.beginAnimation(box_logo_c, 0, 250, true);
+    var box_logo_e = scene.getMeshByName("anm_logo_e")
+    scene.beginAnimation(box_logo_e, 0, 250, true);
+    var box_logo_n = scene.getMeshByName("anm_logo_n")
+    scene.beginAnimation(box_logo_n, 0, 250, true);
+    var box_logo_o = scene.getMeshByName("anm_logo_o")
+    scene.beginAnimation(box_logo_o, 0, 250, true);
+        
   }
   
   // import scene

@@ -55,9 +55,10 @@ function createFreeCamera(scene) {
   
   return camera;
 }
- var animationGroup = new BABYLON.AnimationGroup("animations");
-  animationGroup.normalize(0, 250);
-  animationGroup.play(true);
+function Animationblender(scene){
+  var box = scene.getMeshByName("anm_box)
+  scene.beginAnimation(box, 0, 250, true);
+}
   
 window.addEventListener("resize", function () {
   engine.resize();

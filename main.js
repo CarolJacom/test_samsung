@@ -24,6 +24,11 @@ var createScene = function () {
   /* Collisions */
   scene.collisionsEnabled = false;
 
+  function AnimationBlender(scene){
+    var box = scene.getMeshByName("anm_box")
+    scene.beginAnimation(box, 0, 250, true);
+  }
+  
   // import scene
   BABYLON.SceneLoader.ShowLoadingScreen = false;
   BABYLON.SceneLoader.Append("scene/", "scene.babylon", scene, onSceneImported);
@@ -31,6 +36,7 @@ var createScene = function () {
     scene.activeCamera = camera;
     scene.gravity = new BABYLON.Vector3(0, -0.1, 0);
     scene.fogMode = BABYLON.Scene.FOGMODE_NONE;
+    AnimationBlender(scene);
     return scene;
 }
 

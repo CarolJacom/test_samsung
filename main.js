@@ -23,20 +23,18 @@ var createScene = function () {
   var camera = createFreeCamera(scene);
   /* Collisions */
   scene.collisionsEnabled = false;
+  
+  var box = scene.getMeshByName("anm_box")
 
   // import scene
   BABYLON.SceneLoader.ShowLoadingScreen = false;
   BABYLON.SceneLoader.Append("scene/", "scene.babylon", scene, onSceneImported);
   function onSceneImported(newMeshes, particleSystems, skeletons) {
+    scene.beginAnimation(box, 0, 250, true);
     scene.activeCamera = camera;
     scene.gravity = new BABYLON.Vector3(0, -0.1, 0);
     scene.fogMode = BABYLON.Scene.FOGMODE_NONE;
     return scene;
-}
-
-function AnimationBlender(scene){
-  var box = scene.getMeshByName("anm_box")
-  scene.beginAnimation(box, 0, 250, true);
 }
 
 function createFreeCamera(scene) {

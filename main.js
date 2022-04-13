@@ -55,6 +55,10 @@ function createFreeCamera(scene) {
   
   return camera;
 }
+ var animationGroup = new BABYLON.AnimationGroup("animations");
+  animationGroup.normalize(0, 250);
+  animationGroup.play(true);
+  
 window.addEventListener("resize", function () {
   engine.resize();
 });

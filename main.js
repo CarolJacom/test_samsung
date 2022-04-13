@@ -15,6 +15,10 @@ function startGame() {
     scene.render();
   });
 }
+    function AnimationBlender(scene){
+  var box = scene.getMeshByName("anm_box")
+  scene.beginAnimation(box, 0, 250, true);
+}
 
 var createScene = function () {
   var scene = new BABYLON.Scene(engine); // defines the engine to render the scene
@@ -23,11 +27,6 @@ var createScene = function () {
   var camera = createFreeCamera(scene);
   /* Collisions */
   scene.collisionsEnabled = false;
-  
-    function AnimationBlender(scene){
-  var box = scene.getMeshByName("anm_box")
-  scene.beginAnimation(box, 0, 250, true);
-}
 
   // import scene
   BABYLON.SceneLoader.ShowLoadingScreen = false;

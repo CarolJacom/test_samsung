@@ -32,9 +32,8 @@ var createScene = function () {
     scene.gravity = new BABYLON.Vector3(0, -0.1, 0);
     scene.fogMode = BABYLON.Scene.FOGMODE_NONE;
     return scene;
-  }
- 
-  
+}
+
 function createFreeCamera(scene) {
   var camera = new BABYLON.FreeCamera("freeCamera", new BABYLON.Vector3(1, 1, 1), scene);
   camera.attachControl(canvas);
@@ -52,11 +51,10 @@ function createFreeCamera(scene) {
   camera.keysRight.push('D'.charCodeAt(0));
 
   camera.position = new BABYLON.Vector3(-4.3, 1.6, 34);
-  camera.rotation = new BABYLON.Vector3( 0, -0.3, 0);
+  camera.rotation = new BABYLON.Vector3( 0, -0.4, 0);
   
   return camera;
 }
-  
 window.addEventListener("resize", function () {
   engine.resize();
 });

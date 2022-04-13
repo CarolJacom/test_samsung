@@ -23,11 +23,6 @@ var createScene = function () {
   var camera = createFreeCamera(scene);
   /* Collisions */
   scene.collisionsEnabled = false;
-
-  function AnimationBlender(scene){
-    var box = scene.getMeshByName("anm_box")
-    scene.beginAnimation(box, 0, 250, true);
-  }
   
   // import scene
   BABYLON.SceneLoader.ShowLoadingScreen = false;
@@ -61,6 +56,10 @@ function createFreeCamera(scene) {
   
   return camera;
 }
+    function AnimationBlender(scene){
+    var box = scene.getMeshByName("anm_box")
+    scene.beginAnimation(box, 0, 250, true);
+  }
 window.addEventListener("resize", function () {
   engine.resize();
 });

@@ -33,12 +33,7 @@ var createScene = function () {
     scene.fogMode = BABYLON.Scene.FOGMODE_NONE;
     return scene;
   }
-  
-function AnimationBlender(scene){
-  var box = scene.getMeshByName("anm_box")
-  scene.beginAnimation(box, 0, 250, true);
-}
- AnimationBlender.play(true);
+ 
   
 function createFreeCamera(scene) {
   var camera = new BABYLON.FreeCamera("freeCamera", new BABYLON.Vector3(1, 1, 1), scene);

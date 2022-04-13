@@ -51,11 +51,12 @@ function createFreeCamera(scene) {
   camera.keysRight.push('D'.charCodeAt(0));
 
   camera.position = new BABYLON.Vector3(-4.3, 1.6, 34);
-  camera.rotation = new BABYLON.Vector3( 0, 0, 0);
+  camera.rotation = new BABYLON.Vector3( 0, -0.3, 0);
   
   return camera;
 }
-function Animationblender(scene){
+  
+function AnimationBlender(scene){
   var box = scene.getMeshByName("anm_box")
   scene.beginAnimation(box, 0, 250, true);
 }

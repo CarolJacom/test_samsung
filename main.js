@@ -34,6 +34,11 @@ var createScene = function () {
     return scene;
 }
 
+function AnimationBlender(scene){
+  var box = scene.getMeshByName("anm_box")
+  scene.beginAnimation(box, 0, 250, true);
+}
+
 function createFreeCamera(scene) {
   var camera = new BABYLON.FreeCamera("freeCamera", new BABYLON.Vector3(1, 1, 1), scene);
   camera.attachControl(canvas);
@@ -54,11 +59,6 @@ function createFreeCamera(scene) {
   camera.rotation = new BABYLON.Vector3( 0, -0.3, 0);
   
   return camera;
-}
-  
-function AnimationBlender(scene){
-  var box = scene.getMeshByName("anm_box");
-  scene.beginAnimation(box, 0, 250, true);
 }
   
 window.addEventListener("resize", function () {

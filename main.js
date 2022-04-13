@@ -35,7 +35,7 @@ var createScene = function () {
     scene.activeCamera = camera;
     scene.gravity = new BABYLON.Vector3(0, -0.1, 0);
     scene.fogMode = BABYLON.Scene.FOGMODE_NONE;
-    scene.AnimationBlender.play(true)
+    AnimationBlender.play(true)
     return scene;
   }
 
